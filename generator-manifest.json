@@ -1,0 +1,18 @@
+{
+  "branch": "main",
+  "depends_recipe": "",
+  "description_control": "ABM CustomMix Importer",
+  "description_recipe": "Imports ABM CustomMix files from Github.",
+  "history_source_dir": "ABMCustomMixImporter",
+  "internal_package_name": "enigma2-plugin-systemplugins-abmcustommiximporter",
+  "module_dir_name": "ABMCustomMixImporter",
+  "output_subdir": "ABMCustomMixImporter",
+  "package_name": "enigma2-plugin-systemplugins-abmcustommiximporter",
+  "plugin_src_rel": "ABMCustomMixImporter",
+  "python_package": "ABMCustomMixImporter",
+  "rdepends_recipe": "",
+  "replaces": "",
+  "repo_name": "ABMCustomMixImporter",
+  "rrecommends": "",
+  "rreplaces": ""
+}
