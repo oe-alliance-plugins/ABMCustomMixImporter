@@ -3,20 +3,20 @@ import os
 import xml.dom.minidom
 
 
-class Mixes():
+class Mixes:
 	MIXES_DIR = os.path.dirname(__file__) + "/mixes"
 
 	def parseXML(self, filename):
 		try:
 			mix = open(filename, "r")
 		except Exception as e:
-			print("[ABMCustomMixImporter][Mixes] Cannot open %s: %s" % (filename, e))
+			print(f"[ABMCustomMixImporter][Mixes] Cannot open {filename}: {e}")
 			return None
 
 		try:
 			dom = xml.dom.minidom.parse(mix)
 		except Exception as e:
-			print("[ABMCustomMixImporter][Mixes] XML parse error (%s): %s" % (filename, e))
+			print(f"[ABMCustomMixImporter][Mixes] XML parse error ({filename}): {e}")
 			mix.close()
 			return None
 
@@ -58,7 +58,7 @@ class Mixes():
 
 			if not ("name" in mix and "provider" in mix and "url" in mix):
 
-				print("[ABMCustomMixImporter][Mixes] Incomplete XML %s" % filename)
+				print(f"[ABMCustomMixImporter][Mixes] Incomplete XML {filename}")
 				continue
 
 			mixes[mix["key"]] = mix

@@ -141,7 +141,7 @@ class ABMCustomMixImporter(Screen):
 
 			except Exception as e:
 				self.showError("Saving the CustomMix file failed")
-				print("[ABMCustomMixImporter]Saving file failed. %s" % e)
+				print(f"[ABMCustomMixImporter]Saving file failed. {e}")
 
 			if not inStandby:
 				self["action"].setText(_('File fetched and saved OK'))
@@ -158,7 +158,7 @@ class ABMCustomMixImporter(Screen):
 			if int(response.getcode()) == 200:
 				return response.read()
 		except Exception as err:
-			print('[ABMCustomMixImporter][fetchURL] ERROR 3: &s' % err)
+			print(f'[ABMCustomMixImporter][fetchURL] ERROR 3: {err}')
 		self.showError("The CustomMix file could not be fetched")
 
 	def showError(self, message):
@@ -252,7 +252,7 @@ class schedule:
 			self.fetchtimer.startLongTimer(next - now)
 		else:
 			next = -1
-		print("[ABMCustomMixImporter][startNextCycle] Time set to %s %s" % (strftime("%c", localtime(next)), strftime("(now=%c)", localtime(now))))
+		print(f"[ABMCustomMixImporter][startNextCycle] Time set to {strftime('%c', localtime(next))} {strftime('(now=%c)', localtime(now))}")
 
 
 scheduleTimer = None
