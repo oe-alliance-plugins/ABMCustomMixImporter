@@ -13,10 +13,9 @@ from enigma import eTimer
 
 # Components
 from Components.ActionMap import ActionMap
-from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigSelection, configfile
+from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigSelection
 from Components.Label import Label
 from Components.Sources.StaticText import StaticText
-from Components.Button import Button
 
 # screens
 from Screens.MessageBox import MessageBox  # for are you sure questions after config changes
@@ -31,16 +30,7 @@ from Tools.Directories import pathExists, fileExists
 from Plugins.Plugin import PluginDescriptor
 from .mixes import Mixes
 
-import sys
-pythonVer = 2
-if sys.version_info.major == 3:
-	pythonVer = 3
-
-if pythonVer == 3:
-	from urllib.request import urlopen, Request
-	from urllib.error import URLError, HTTPError
-else:
-	from urllib2 import urlopen, Request, HTTPError, URLError
+from urllib.request import urlopen, Request
 
 mixes = Mixes().read()
 choices = sorted([(mixes[x]["key"], mixes[x]["name"]) for x in mixes], key=lambda listItem: listItem[1])
@@ -133,11 +123,10 @@ class ABMCustomMixImporter(Screen):
 			self["action"].setText(_('Fetching from github'))
 			self["status"] = Label("1/1")
 		CustomMix = self.fetchURL()
-		if pythonVer == 3:
-			try:
-				CustomMix = CustomMix.decode()
-			except:
-				pass
+		try:
+			CustomMix = CustomMix.decode()
+		except Exception:
+			pass
 
 		if CustomMix:
 
@@ -170,9 +159,6 @@ class ABMCustomMixImporter(Screen):
 				return response.read()
 		except Exception as err:
 			print('[ABMCustomMixImporter][fetchURL] ERROR 3: &s' % err)
-		except:
-			import sys
-			print('[ABMCustomMixImporter][fetchURL] undefined error %s' % sys.exc_info()[0])
 		self.showError("The CustomMix file could not be fetched")
 
 	def showError(self, message):
@@ -203,7 +189,7 @@ class schedule:
 			self.clock = [config.autobouquetsmaker.scheduletime.value[0], config.autobouquetsmaker.scheduletime.value[1]]
 			self.repeattype = "daily"  # config.autobouquetsmaker.repeattype.value
 			print("[ABMCustomMixSchedule][__init__] ABM config available")
-		except:
+		except Exception:
 			self.enableSchedule = False
 			self.clock = [0, 0]
 			self.repeattype = "daily"
