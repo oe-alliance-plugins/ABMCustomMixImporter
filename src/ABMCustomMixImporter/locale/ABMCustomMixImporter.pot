@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the abmcustommiximporter package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: abmcustommiximporter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-03 14:48+0100\n"
+"POT-Creation-Date: 2026-04-08 12:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,86 +17,94 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: ../plugin.py:44
 msgid "1 minute"
 msgstr ""
 
+#: ../plugin.py:44
 msgid "10 minutes"
 msgstr ""
 
+#: ../plugin.py:44
 msgid "2 minutes"
 msgstr ""
 
+#: ../plugin.py:44
 msgid "20 minutes"
 msgstr ""
 
+#: ../plugin.py:44
 msgid "3 minutes"
 msgstr ""
 
+#: ../plugin.py:44
 msgid "30 minutes"
 msgstr ""
 
+#: ../plugin.py:44
 msgid "5 minutes"
 msgstr ""
 
+#: ../plugin.py:113
 msgid "ABM CustomMix"
 msgstr ""
 
+#: ../plugin.py:287 ../plugin.py:299 ../setup.xml
 msgid "ABM CustomMix Importer"
 msgstr ""
 
+#: ../plugin.py:167
 msgid "ABMCustomMixImporter"
 msgstr ""
 
-msgid "Delete file"
-msgstr ""
-
-msgid "Exit"
-msgstr ""
-
-msgid "Fetch file"
-msgstr ""
-
-msgid "Fetching from github"
-msgstr ""
-
-msgid "File fetched and saved OK"
-msgstr ""
-
-msgid "Main menu"
-msgstr ""
-
-msgid "Really close without saving settings?"
-msgstr ""
-
-msgid "Save setup"
-msgstr ""
-
-msgid "Saving CustomMix file"
-msgstr ""
-
-msgid "Service searching"
-msgstr ""
-
-msgid "Setup"
-msgstr ""
-
-msgid "Starting importer..."
-msgstr ""
-
+#: ../setup.xml
 msgid "Allows you automatically fetch the CustomMix file."
 msgstr ""
 
+#: ../plugin.py:80
+msgid "Delete file"
+msgstr ""
+
+#: ../setup.xml
 msgid "Enable autofetch"
 msgstr ""
 
+#: ../plugin.py:70
+msgid "Fetch file"
+msgstr ""
+
+#: ../plugin.py:123
+msgid "Fetching from github"
+msgstr ""
+
+#: ../plugin.py:147
+msgid "File fetched and saved OK"
+msgstr ""
+
+#: ../setup.xml
 msgid "Import"
 msgstr ""
 
+#: ../setup.xml
 msgid "Lead time"
 msgstr ""
 
+#: ../setup.xml
 msgid "Number of minutes prior to the ABM scan that the CustomMix file should be fetched"
 msgstr ""
 
+#: ../plugin.py:69
+msgid "Save setup"
+msgstr ""
+
+#: ../plugin.py:134
+msgid "Saving CustomMix file"
+msgstr ""
+
+#: ../setup.xml
 msgid "Select the CustomMix you want to import"
+msgstr ""
+
+#: ../plugin.py:114
+msgid "Starting importer..."
 msgstr ""
